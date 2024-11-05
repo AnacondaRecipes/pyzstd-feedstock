@@ -21,7 +21,7 @@ requirements:
     - setuptools >=64,<74
     - wheel
     - pip
-    - zstd
+    - zstd 1.5.6
   run:
     - python
 
