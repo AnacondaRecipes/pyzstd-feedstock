@@ -1,5 +1,5 @@
 {% set name = "pyzstd" %}
-{% set version = "0.15.10" %}
+{% set version = "0.16.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 83603a97fdbcf2139f475c940789f09e32703f931f29f4a8ddf3551e6700108b
+  sha256: 179c1a2ea1565abf09c5f2fd72f9ce7c54b2764cf7369e05c0bfd8f1f67f63d2
 
 build:
   number: 0
@@ -18,10 +18,10 @@ requirements:
     - {{ compiler('c') }}
   host:
     - python
-    - setuptools
+    - setuptools >=64,<74
     - wheel
     - pip
-    - zstd
+    - zstd 1.5.6
   run:
     - python
 
