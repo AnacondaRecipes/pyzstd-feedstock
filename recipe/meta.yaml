@@ -20,7 +20,7 @@ requirements:
     - hatch-vcs
     - pip
   run:
-    - python >=3.10
+    - python
     - backports.zstd >=1.0.0
     - typing-extensions >=4.13.2
 
