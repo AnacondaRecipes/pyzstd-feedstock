@@ -1,6 +1,5 @@
 {% set name = "pyzstd" %}
 {% set version = "0.19.1" %}
-{% set python_min = "3.10" %}
 
 package:
   name: {{ name|lower }}
@@ -11,18 +10,17 @@ source:
   sha256: 36723d3c915b3981de9198d0a2c82b2f5fe3eaa36e4d8d586937830a8afc7d72
 
 build:
-  noarch: python
   number: 0
   script: {{ PYTHON }} -m pip install --no-deps --no-build-isolation -vv .
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python
     - hatchling
     - hatch-vcs
     - pip
   run:
-    - python >={{ python_min }}
+    - python >=3.10
     - backports.zstd >=1.0.0
     - typing-extensions >=4.13.2
 
